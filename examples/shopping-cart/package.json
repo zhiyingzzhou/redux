@@ -4,7 +4,7 @@
   "description": "Redux shopping-cart example",
   "scripts": {
     "start": "node server.js",
-    "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register",
+    "test": "NODE_ENV=test mocha --recursive --compilers js:babel-register",
     "test:watch": "npm test -- --watch"
   },
   "repository": {
