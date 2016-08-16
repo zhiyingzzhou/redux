@@ -1,14 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 
-export default class Product extends Component {
-  render() {
-    const { price, quantity, title } = this.props
-    return <div> {title} - &#36;{price} {quantity ? `x ${quantity}` : null} </div>
-  }
-}
+const Product = ({ price, quantity, title }) => (
+	<div> {title} - &#36;{price} {quantity ? `x ${quantity}` : null} </div>
+)
 
 Product.propTypes = {
-  price: PropTypes.number,
-  quantity: PropTypes.number,
-  title: PropTypes.string
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired
 }
+
+export default Product
